@@ -1,0 +1,155 @@
+/* ---------- Elaborado por: Eli Haziel Ortiz Ramirez ---------- */
+
+/* ---- Global Styles ---- */
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---- body styles ---- */
+body {
+    /* font styles */
+    font-size: 1.6rem;
+
+    /* effects */
+    background-color: #222;
+}
+
+/* ---- header styles ---- */
+header {
+    /* sizing */
+    width: 100%;
+    height: auto;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    /* effects */
+    background-color: #333333;
+}
+
+header > h1 {
+    /* font styles */
+    text-align: center;
+    color: white;
+    font-size: 3.2rem;
+}
+
+header > p {
+    /* font styles */
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+
+    /* spacing */
+    margin-bottom: 20px;
+}
+
+.link-container {
+    /* display */
+    display: flex;
+    gap: 12px;
+
+    /* position */
+    position: absolute;
+    top: 4%;
+    right: 0.5%;
+
+    /* spacing */
+    padding: 8px 14px;
+    margin-bottom: 12px;
+
+    /* effects */
+    background-color: #ffffff;
+    border-radius: 18px;
+}
+
+.link-container > a {
+    /* sizing */
+    width: 24px;
+    height: 24px;
+
+    /* font styles */
+    text-decoration: none;
+    color: #3b82f6;
+    font-size: 1rem;
+
+    /* effects */
+    transition: 0.3s all ease-in;
+    cursor: pointer;
+}
+
+.link-container > a > img {
+    width: -webkit-fill-available;
+    height: 100%;
+}
+
+.link-container > a:hover {
+    transform: scale(1.1);
+}
+
+
+/* ---- Class DOM styles ---- */
+.DOM {
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+.DOM > h2 {
+    /* font styles */
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ---- Nav Styles ---- */
+.DOM > nav a {
+    /* font styles */
+    color: #3b82f6;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.DOM > p {
+    /* font styles */
+    color: #3b82f6;
+    font-size: 20px;
+}
+
+.DOM #formulario {
+    max-width: 500px;
+
+}
+
+.DOM form input {
+    /* max-width: ; */
+    /* sizing */
+    width: 100%;
+
+    /* spacing */
+    padding: 2rem;
+
+    /* display */
+    display: block;
+
+    /* effects */
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.DOM form input[type="submit"] {
+    /* effects */
+    background-color: #3b82f6;
+    /* font styles */
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
