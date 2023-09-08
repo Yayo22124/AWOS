@@ -1,5 +1,14 @@
 /* ---------- Elaborado por: Eli Haziel Ortiz Ramirez ---------- */
 
+/* Open Props */
+@import "https://unpkg.com/open-props/animations.min.css";
+@import "https://unpkg.com/open-props/easings.min.css";
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/gray-hsl.min.css";
+@import "https://unpkg.com/open-props/purple-hsl.min.css";
+@import "https://unpkg.com/open-props/choco-hsl.min.css";
+
+
 /* ---- Global Styles ---- */
 * {
     /* font-family: 'Lato', sans-serif; */
@@ -20,6 +29,7 @@ body {
 
 /* ---- header styles ---- */
 header {
+
     /* sizing */
     width: 100%;
     height: auto;
@@ -32,16 +42,26 @@ header {
 
     /* effects */
     background-color: #333333;
+
 }
 
-header > h1 {
+header>h1 {
     /* font styles */
     text-align: center;
-    color: white;
+    /* color: white; */
+    color: var(--orange-4);
     font-size: 3.2rem;
+    
+    
+    /* animation */
+    animation:
+        var(--animation-scale-down) reverse,
+        var(--animation-fade-out) reverse;
+    animation-timing-function: var(--ease-squish-5);
+    animation-duration: 1s;
 }
 
-header > p {
+header>p {
     /* font styles */
     color: white;
     text-align: center;
@@ -68,9 +88,15 @@ header > p {
     /* effects */
     background-color: #ffffff;
     border-radius: 18px;
+
+    /* animation */
+    opacity: 0;
+    animation: var(--animation-fade-in) forwards,
+      var(--animation-slide-in-up) forwards;
+    animation-timing-function: var(--ease-squish-3);
 }
 
-.link-container > a {
+.link-container>a {
     /* sizing */
     width: 24px;
     height: 24px;
@@ -83,14 +109,21 @@ header > p {
     /* effects */
     transition: 0.3s all ease-in;
     cursor: pointer;
+
+    /* animation */
+    animation:
+        var(--animation-scale-down) reverse,
+        var(--animation-fade-out) reverse;
+    animation-timing-function: var(--ease-squish-5);
+    animation-duration: 1.4s;
 }
 
-.link-container > a > img {
+.link-container>a>img {
     width: -webkit-fill-available;
     height: 100%;
 }
 
-.link-container > a:hover {
+.link-container>a:hover {
     transform: scale(1.1);
 }
 
@@ -102,7 +135,7 @@ header > p {
 
 }
 
-.DOM > h2 {
+.DOM>h2 {
     /* font styles */
     color: #fff;
     text-align: center;
@@ -110,7 +143,7 @@ header > p {
 }
 
 /* ---- Nav Styles ---- */
-.DOM > nav a {
+.DOM>nav a {
     /* font styles */
     color: #3b82f6;
     font-size: 20px;
@@ -118,7 +151,7 @@ header > p {
     margin-right: 10px;
 }
 
-.DOM > p {
+.DOM>p {
     /* font styles */
     color: #3b82f6;
     font-size: 20px;
