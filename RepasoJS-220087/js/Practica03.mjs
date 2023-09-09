@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------
 //                          Repaso de JavaScript
-// Practica 01: Declaración de Variables.
+// Practica 03: Declaración de Variables.
 // Realizado por: Eli Haziel Ortiz Ramirez 220087 4B DSM
 // 
 // --------------------------------------------------------------------------------
