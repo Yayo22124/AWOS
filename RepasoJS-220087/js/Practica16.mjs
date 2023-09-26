@@ -1,8 +1,21 @@
+
+// --------------------------------------------------------------------------------
+//                          Repaso de JavaScript
+// Practica 16: Creando nuevos elementos en el DOM (Document Object Model)
+// Realizado por: Eli Haziel Ortiz Ramirez 220087 4B DSM
+//
+// --------------------------------------------------------------------------------
+const bg14 = 'radial-gradient(circle, rgba(95,251,63,1) 0%, rgba(70,252,174,0.907527977011117) 100%)';
+
+const style14 = `background: ${bg14}; color: white; border-radius: 12px; padding: 4px; font-size: 1.0rem; font-weight: bold;`;
+const reto14 = `background: red; color: white; border-radius: 12px; padding: 4px 3px;margin-left: 20px; font-size: 1.0rem; font-weight: bold;`;
+const subStyle14 = `background: red; color: white; border-radius: 12px; padding: 4px 3px;margin-left: 20px; font-size: 1.0rem; font-weight: bold;`;
+
 const style = 'background-color: aqua; color: white; border: 3px solid black; font-size: 1.0rem;'
 import medejasEnter from "./Practica17.mjs"
 console.warn(" ----- Practica 16: Agregando nuevos elementos en el DOM -----");
 
-console.log("%c1.- Agregando un mensaje de error. ", style);
+console.log('%c 1. Agregando nuevos elementos en el DOM ', style14)
 
 const formulario = document.querySelector("#formulario")
 formulario.addEventListener('submit', e => {

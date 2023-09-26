@@ -1,9 +1,24 @@
-const url = "https://jsonplaceholder.typicode.com/todos/1";
+const url = "https://jsonplaceholder.typicode.com/comments";
 
-fetch(url)
-.then( (respuesta) => {
-    return respuesta.json();
-})
-.then( (resultado) => {
-    console.log("Resultado casi listo");
-})
+
+// Promises
+const consultarAPI = () => {
+    fetch(url)
+        .then((respuesta) => respuesta.json())
+
+        .then((resultado) => {
+            resultado.forEach(comentario => {
+                console.log(comentario);
+            });
+        })
+}
+
+
+// Async Await
+const consultarAPIaw = async () => {
+    const respuesta = await fetch(url)
+    console.log('antes de la respuesta');
+    const resultado = await respuesta.json();
+    console.log('despues del resulado');
+}
+consultarAPIaw();

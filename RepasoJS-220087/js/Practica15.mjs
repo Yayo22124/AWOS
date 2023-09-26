@@ -100,40 +100,49 @@ console.log('%c 2. Agregando un nueo evento - Submit ', style14)
 //     console.log(`El password del usuario es: ${passwordUsuario}`);
 // })
 
+// Retos
+const enlace1 = document.querySelector('#elemento1');
+console.log(enlace1);
 
-// --------------------------------------------------------------------------------
-//                          Repaso de JavaScript
-// Practica 16: Creando nuevos elementos en el DOM (Document Object Model)
-// Realizado por: Eli Haziel Ortiz Ramirez 220087 4B DSM
-//
-// --------------------------------------------------------------------------------
+// Reto 1: input Password con caracteres específicos 
+console.log("%c RETO Input Password Corazoncitos UwU",reto14);
+const passwordInput = document.getElementById("password");
 
-console.log('%c 1. Agregando nuevos elementos en el DOM ', style14)
+passwordInput.addEventListener("input", function (event) {
+    // Obtén el valor actual del campo de contraseña
+    const passwordValue = passwordInput.value;
 
-const alerta = document.createElement('div');
-alerta.classList.add('alerta');
+    // Cambia el tipo de input a "text" para mostrar corazones
+    passwordInput.setAttribute("type", "text");
 
+    // Establece el valor con corazones
+    passwordInput.value = passwordValue.replace(/./g, "♥");
+});
 
+// Reto 2
+console.log("%c RETO Saludo personalizado",reto14);
 
-const formulario = document.querySelector("#formulario");
-formulario.addEventListener('submit', e => {
-    e.preventDefault();
-    const nombreUsuario = document.querySelector("#nombre").value;
-    const passwordUsuario = document.querySelector("#password").value;
-    if (nombreUsuario == '' || passwordUsuario == '') {
-
-        // alert("Los datos del formulario deben estar completos");
-        alerta.classList.add('error')
-        alerta.textContent = "Los datos para realizar la validación están incompletos."
-
+enlace1.addEventListener('click', (event) => {
+  event.preventDefault();
+  var horaActual = new Date().getHours();
+  var persona = "Haziel"; 
+  
+  if (horaActual >= 5 && horaActual < 12) {
+      var saludo = "Buenos días";
+    } else if (horaActual >= 12 && horaActual < 19) {
+        var saludo = "Buenas tardes";
     } else {
-        alerta.classList.add("exito")
-        alerta.textContent = "Los datos han sido llenados con éxito"
+        var saludo = "Buenas noches";
     }
+    
+    console.log(`${saludo}, ${persona}`);
+});
 
-    // alert('Enviaste los datos del formulario');
+// Reto 3
+const calcularRaiz = function (n = 81) {
+    const raiz = Math.sqrt(n);
+    return raiz; 
+}
 
-    // alert(`El usuario que está intentando logearse es: ${nombreUsuario}`);
-
-    // alert(`El password del usuario es: ${passwordUsuario}`);
-})
+console.log("%c RETO RAIZ DE 81",reto14);
+console.log(`Resultado de la raiz cuadrada de 81: ${calcularRaiz()}`);
