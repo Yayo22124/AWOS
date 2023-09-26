@@ -39,6 +39,7 @@ header {
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-bottom: 30px;
 
     /* effects */
     background-color: #333333;
@@ -127,12 +128,52 @@ header>p {
     transform: scale(1.1);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+}
+
+.links {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link {
+    background-color: #f6ae3b;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 18px;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out all;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    font-weight: bolder;
+    background-color: #f6ae3bad;
+}
 
 /* ---- Class DOM styles ---- */
 .DOM {
     max-width: 120rem;
     margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .DOM>h2 {
@@ -158,7 +199,8 @@ header>p {
 }
 
 .DOM #formulario {
-    max-width: 500px;
+
+    width: 40%;
 
 }
 
@@ -168,7 +210,7 @@ header>p {
     width: 100%;
 
     /* spacing */
-    padding: 2rem;
+    padding: 1rem;
 
     /* display */
     display: block;
@@ -186,4 +228,21 @@ header>p {
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.alerta {
+    background-color: yellow;
+    color: white;
+    font-weight: bolder;
+    padding: 8px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+}
+.alerta.error {
+    background-color: red;
+}
+
+.alerta.exito {
+    background-color: green;
 }
