@@ -246,3 +246,37 @@ main > h2 {
 .alerta.exito {
     background-color: green;
 }
+
+main {
+    background: #2e2e2e;
+    padding-top: 40px;
+}
+
+main > h1 {
+    color: white;
+}
+
+main > h2 {
+    color: #f6ae3b;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.notificacion {
+    background-color: #3bf644bd;
+    margin-inline: auto;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border: 12px;
+    width: 50%;
+}
+
+.select-test {
+    width: 50%;
+    padding: 12px;
+    border-radius: 18px;
+    background-color: #b3d0ff;
+    color: black;
+    margin-bottom: 50px;
+}

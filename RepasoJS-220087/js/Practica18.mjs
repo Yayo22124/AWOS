@@ -1,24 +1,38 @@
 const url = "https://jsonplaceholder.typicode.com/comments";
 
-
+console.warn("---- Practica 18: Fetch a una API ----");
 // Promises
 const consultarAPI = () => {
     fetch(url)
-        .then((respuesta) => respuesta.json())
-
+        .then((respuesta) => {
+            if (!respuesta.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return respuesta.json();
+        })
         .then((resultado) => {
             resultado.forEach(comentario => {
                 console.log(comentario);
             });
         })
+        .catch(error => console.error('Error:', error));
 }
-
 
 // Async Await
 const consultarAPIaw = async () => {
-    const respuesta = await fetch(url)
-    console.log('antes de la respuesta');
-    const resultado = await respuesta.json();
-    console.log('despues del resulado');
+    try {
+        const respuesta = await fetch(url);
+        if (!respuesta.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const resultado = await respuesta.json();
+        resultado.forEach(comentario => {
+            console.log(comentario);
+        });
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
-consultarAPIaw();
+
+// Llama a la función que desees
+consultarAPIaw();  // o consultarAPI();

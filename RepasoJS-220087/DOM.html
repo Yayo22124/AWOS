@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
+
 <body>
     <header>
         <h1 id="elemento1">Fundamentos de JavaScript - DOM</h1>
-        <p class="patito">Creado por:  &lt; Eli Haziel Ortiz Ramirez &gt;
+        <p class="patito">Creado por: &lt; Eli Haziel Ortiz Ramirez &gt;
             <a href="https://github.com/Yayo22124">Yayo22124</a>
         </p>
     </header>
@@ -26,7 +28,7 @@
             <a href="#" id="enlace1">Enlace 1</a>
             <a href="#">Enlace 2</a>
             <a href="#" id="elemento1">Enlace 3</a>
-            <a  id="elemento4">Enlace 4</a>
+            <a id="elemento4">Enlace 4</a>
         </nav>
 
         <div class="tecnologias patito">
@@ -36,31 +38,33 @@
         </div>
 
         <form id="formulario" class="patito">
-            <input 
-                type="text"
-                placeholder="Tu Nombre"
-                id="nombre"
-                class="nombre"
-                value=""
-            >
+            <input type="text" placeholder="Tu Nombre" id="nombre" class="nombre" value="">
 
-            <input 
-                type="password"
-                placeholder="Tu Password"
-                id="password"
-                class="password"
-            >
+            <input type="password" placeholder="Tu Password" id="password" class="password">
 
-            <input 
-                id="boton"
-                type="submit"
-                value="Login"
-            >
+            <input id="boton" type="submit" value="Login">
         </form>
-      
+
     </div>
 
-    <script src="./js/Practica16.mjs" type="module"></script>
+    <main class="tarea">
+        <h1>Tarea: Eventos en JavaScript</h1>
+        <!-- eventos de video -->
+        <h2>Evento 1: select</h2>
+        <input type="text" placeholder="Prueba el evento select" id="inputSelect" class="select-test"
+            onselect="handleSelect(event)">
+
+        <h2>Evento 2: volumechange</h2>
+        <h2>Evento 3: canplaytrough</h2>
+        <video id="miVideo" width="560" height="315" controls>
+            <source src="./img/SaveTube.io-Worlds 2023 _ Orchestral Theme - League Of Legends.mp4" type="video/mp4">
+            Tu navegador no admite el elemento de video.
+        </video>
+    </main>
+
+    <!-- <script src="./js/Practica16.mjs" type="module"></script> -->
     <!-- <script src="./js/Practica16.mjs"></script> -->
+    <script src="./js/Eventos.mjs"></script>
 </body>
+
 </html>
